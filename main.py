@@ -4,7 +4,7 @@ def entrance():
     print("The one in front leads to the livingroom")
     print("The one to the side leads to kitchen")
     print("Where do you want to go")
-    ans= input("1, Enter the livingroom \n2, Check out the kitchen \n3, Look around the entrance ")
+    ans= input("1, Enter the livingroom \n2, Check out the kitchen \n3, Look around the entrance \n")
     if(ans == "1"):
         livingroom()
     elif(ans == "2"):
@@ -14,7 +14,7 @@ def entrance():
         print("Other than the main entrance and the other two doors")
         print("You dont spot anything")
         print("Where do you want to go?")
-        ans= input("1, Enter the living room \n2, Look in the kitchen ")
+        ans= input("1, Enter the living room \n2, Look in the kitchen \n")
         if(ans == "1"):
             livingroom()
         elif(ans == "2"):
@@ -32,7 +32,7 @@ def entrance2():
     print("You head back into the entrance")
     print("The door to the kitchen is still there")
     print("Where do you want to go")
-    ans= input("1, Go back to the livingroom \n2, Check out the kitchen ")
+    ans= input("1, Go back to the livingroom \n2, Check out the kitchen \n")
     if(ans == "1"):
         livingroom()
     elif(ans == "2"):
@@ -46,7 +46,7 @@ def entrance3():
     print("You head back into the entrance")
     print("The door to the livingroom is still there")
     print("Where do you want to go")
-    ans= input("1, Go to the livingroom \n2, Get back in the kitchen ")
+    ans= input("1, Go to the livingroom \n2, Get back in the kitchen \n")
     if(ans == "1"):
         livingroom()
     elif(ans == "2"):
@@ -64,7 +64,7 @@ def livingroom():
     print("One leads to the kitchen")
     print("The other door has no label, only a symbol on the door.")
     print("What do you want to do?")
-    ans= input("1, Enter the kitchen \n2, Enter the other door \n3, Go back to the entrance \n4, Sit down of the sofa and watch some tv \n5, Inspect the symbol on the door")
+    ans= input("1, Enter the kitchen \n2, Enter the other door \n3, Go back to the entrance \n4, Sit down of the sofa and watch some tv \n5, Inspect the symbol on the door \n")
     if(ans == "1"):
         kitchen()
     elif(ans == "2"):
@@ -76,7 +76,7 @@ def livingroom():
     elif(ans == "5"):
         print("You inspect the symbol on the door")
         print("The symbol looks like a spiral")
-        ans= input("1, Enter the room \n2, Step away from the door")
+        ans= input("1, Enter the room \n2, Step away from the door \n")
         if(ans == "1"):
             writersRoom()
         elif(ans == "2"):
@@ -94,7 +94,7 @@ def livingroom2():
     print("You get up from the sofa")
     print("All the doors are still there")
     print("What do you do?")
-    ans= input("1, Enter the kitchen \n2, Enter the other room \n3, Go back into the entrance \n4, Inspect the symbol on the other door ")
+    ans= input("1, Enter the kitchen \n2, Enter the other room \n3, Go back into the entrance \n4, Inspect the symbol on the other door \n")
     if(ans == "1"):
         kitchen()
     elif(ans == "2"):
@@ -104,7 +104,7 @@ def livingroom2():
     elif(ans == "4"):
         print("You inspect the symbol on the door")
         print("The symbol looks like a spiral")
-        ans= input("1, Enter the room \n2, Step away from the door")
+        ans= input("1, Enter the room \n2, Step away from the door \n")
         if(ans == "1"):
             writersRoom()
         elif(ans == "2"):
@@ -118,7 +118,7 @@ def livingroom3():
     print("You step away from the dooe with the symbol")
     print("The room looks the same")
     print("What do you do?")
-    ans= input("1, Enter the kitchen \n2, Go back to the entrace \n3, Open the door with the symbol \n4, Sit down at the sofa")
+    ans= input("1, Enter the kitchen \n2, Go back to the entrace \n3, Open the door with the symbol \n4, Sit down at the sofa \n")
     if(ans == "1"):
         kitchen()
     elif(ans == "2"):
@@ -138,7 +138,7 @@ def kitchen():
     print("There is some food on the tabel")
     print("The two doors in the room lead to the entrance and the livingroom")
     print("What do you do?")
-    ans= input("1, Enter the entrance \n2, Enter the livingroom \n3, Take a seat at the table")
+    ans= input("1, Enter the entrance \n2, Enter the livingroom \n3, Take a seat at the table \n")
     if(ans == "1"):
         entrance()
     elif(ans == "2"):
@@ -154,9 +154,9 @@ def kitchen2():
     print("You get up from the table")
     print("The two doors are still there")
     print("What do you do?")
-    ans= input("1, Go to the entrance \n2, Enter the livingroom")
+    ans= input("1, Go to the entrance \n2, Enter the livingroom \n")
     if(ans == "1"):
-        entrance()
+        entrance3()
     elif(ans == "2"):
         livingroom()
     else:
@@ -174,12 +174,13 @@ def writersRoom():
     print("You seem to have escaped this nightmare")
     print("You win!")
     print("Congrats!")
+    end()
 
 def tv():
     print("You sit down at the sofa infront of you")
     print("Infront of you is the remote to the tv")
     print("What do you do?")
-    ans= input("1, Pick up the remote and begin watching \n2, Stand back up")
+    ans= input("1, Pick up the remote and begin watching \n2, Stand back up \n")
     if(ans == "1"):
         print("As you begin flipping through the channels")
         print("Nothing seems to be on")
@@ -207,7 +208,7 @@ def table():
     print("Almost too good")
     print("But maybe one bite wont hurt")
     print("What do you do?")
-    ans= input("1, Take a bite of the strange food \n 2, Get back up from the tabel")
+    ans= input("1, Take a bite of the strange food \n2, Get back up from the table \n")
     if(ans == "1"):
         print("As you take just one bite from the food")
         print("You instantly fall in love with it")
@@ -225,3 +226,8 @@ def table():
         print("You decide to stay seated")
         print("A dark presance takes over you")
         print("You die!")
+
+def end():
+    quit
+
+entrance()
