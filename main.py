@@ -28,6 +28,33 @@ def entrance():
         print("A dark presance takes over you")
         print("You die!")
 
+def entrance2():
+    print("You head back into the entrance")
+    print("The door to the kitchen is still there")
+    print("Where do you want to go")
+    ans= input("1, Go back to the livingroom \n2, Check out the kitchen ")
+    if(ans == "1"):
+        livingroom()
+    elif(ans == "2"):
+        kitchen()
+    else:
+        print("You decide to stay in the room")
+        print("A dark presance takes over you")
+        print("You die!")
+
+def entrance3():
+    print("You head back into the entrance")
+    print("The door to the livingroom is still there")
+    print("Where do you want to go")
+    ans= input("1, Go to the livingroom \n2, Get back in the kitchen ")
+    if(ans == "1"):
+        livingroom()
+    elif(ans == "2"):
+        kitchen()
+    else:
+        print("You decide to stay in the room")
+        print("A dark presance takes over you")
+        print("You die!")
 
 def livingroom():
     print("You step into the livingroom")
@@ -43,7 +70,7 @@ def livingroom():
     elif(ans == "2"):
         writersRoom()
     elif(ans == "3"):
-        entrance()
+        entrance2()
     elif(ans == "4"):
         tv()
     elif(ans == "5"):
@@ -127,7 +154,7 @@ def kitchen2():
     print("You get up from the table")
     print("The two doors are still there")
     print("What do you do?")
-    ans= input("1, Enter the entrance \n2, Enter the livingroom")
+    ans= input("1, Go to the entrance \n2, Enter the livingroom")
     if(ans == "1"):
         entrance()
     elif(ans == "2"):
